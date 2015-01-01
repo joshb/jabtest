@@ -28,3 +28,8 @@ The output includes green dots representing tests that finished successfully, an
 red exclamation marks representing tests that failed. A summary is then printed,
 including information about the assertions that failed and the number of tests
 that passed/failed.
+
+License
+=======
+
+jabtest is open source software available under a [BSD-style license](LICENSE.md).

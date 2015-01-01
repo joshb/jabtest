@@ -2,10 +2,10 @@ jabtest
 =======
 
 jabtest is a very small, easy-to-use library for writing simple unit tests in C.
-All of its code is contained in two files (one .cpp source file and one header file)
-that can easily be added to an existing project.
+All of its code is contained in two files (one C [source file](jabtest.c)
+and one [header file](jabtest.h)) that can easily be added to an existing project.
 
-Here's an example of a program that uses it:
+Here's an [example program](jabtest_example.c) that uses it:
 
 ```c
 #include "jabtest.h"

@@ -25,50 +25,13 @@
 
 #include "jabtest.h"
 
-static TestResult
-test1()
-{
-    ASSERT(1 + 1 == 2);
-    return SUCCESS;
-}
+static TestResult test1() { ASSERT(1 + 1 == 2); return SUCCESS; } /* will succeed */
+static TestResult test2() { ASSERT(1 + 1 == 3); return SUCCESS; } /* will fail */
+static TestResult test3() { ASSERT(1 + 2 == 3); return SUCCESS; } /* will succeed */
 
-static TestResult
-test2()
+int main(int argc, const char *argv[])
 {
-    ASSERT(2 + 2 == 4);
-    return SUCCESS;
-}
-
-static TestResult
-test3()
-{
-    ASSERT(14 / 2 == 7);
-    return SUCCESS;
-}
-
-static TestResult
-test4()
-{
-    ASSERT(1 + 1 == 3); /* uh oh. */
-    return SUCCESS;
-}
-
-static TestResult
-test5()
-{
-    ASSERT(29 % 3 == 2);
-    return SUCCESS;
-}
-
-int
-main(int argc, const char *argv[])
-{
-    run_test(test1);
-    run_test(test2);
-    run_test(test3);
-    run_test(test4);
-    run_test(test5);
+    run_test(test1); run_test(test2); run_test(test3);
     print_test_summary();
-
     return 0;
 }
